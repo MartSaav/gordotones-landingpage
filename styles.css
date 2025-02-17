@@ -167,6 +167,13 @@ footer{
 /* ---------- RESPONSIVE DESIGN ---------- */
 
 /* Móviles (pantallas hasta 768px) */
+@media (max-width: 400px) {
+    * {
+      width: 100%; /* Asegura que el elemento ocupe el 100% del ancho */
+    }
+  }
+
+
 @media (max-width:800px){
 
     .column{
