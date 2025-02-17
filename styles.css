@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+
+
+
+ }
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Oculta el desbordamiento lateral */
+    background-color: rgb(255, 255, 255);
+    padding-top: 0px; /* Ajusta según la altura del navbar */
+}
+header {
+    
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hace que el header ocupe toda la pantalla */
+    background-image: url("paralax0016.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen sin deformarla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Parallax effect opcional */
+    display: grid;
+    align-items:center;
+    justify-content:center;
+
+}
+h1{
+    color: antiquewhite;
+}
+.parallax-text{
+    position: absolute;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0); /* Fondo oscuro transparente */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(0px); /* Efecto vidrio esmerilado */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    gap: 20px;
+
+
+}
+nav {
+
+    
+    background-color: aliceblue;
+    border: 1px solid white;
+    
+}
+.navbar {
+
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    padding: 5px 5px;
+    align-items: center;
+    width: 100%; /* Hace que ocupe todo el ancho */
+    height: 60px; /* Ajusta la altura */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo con ligera transparencia */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
+}
+/* 🔹 Estilo de los enlaces */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+                        
+
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px; /* Espaciado entre enlaces */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: rgb(138, 129, 4);
+}
+
+.about{         /*contenedor de galeria*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    padding: 50px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    border: 0px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.column{
+    
+    flex: 25%;
+    padding: 0;
+}
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* 🔹 Efecto hover */
+.column img:hover {
+    transform: scale(1.05); /* Hace un ligero zoom */
+    box-shadow: 0px 10px 20px rgba(255, 242, 1, 0.3); /* Agrega una sombra suave */
+}
+
+
+.Products{
+    padding: 200px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    border: 0px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.Portfolio{
+    padding: 200px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: aliceblue;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.Contacto{
+    padding: 200px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+footer{
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid white;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Móviles (pantallas hasta 768px) */
+@media (max-width:800px){
+
+    .column{
+        flex: 50%;
+    }
+}
+@media (max-width: 768px) {
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex: 100%;
+        width: 100%; /* Las columnas ocupan todo el ancho */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .column img {
+        max-width: 90%; /* Las imágenes ocupan un buen tamaño en móviles */
+    }
+
+
+
+    .navbar {
+        flex-direction: inherit;
+        gap: 10px;
+        padding: 1px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .section {
+        height: auto;
+        padding: 50px 20px;
+    }
+}
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .section {
+        height: 80vh;
+    }
+}
+
+
