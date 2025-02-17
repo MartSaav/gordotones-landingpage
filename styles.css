@@ -3,9 +3,14 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    
 
 
 
+
+ }
+ html{
+    width: 100%;
 
  }
 body{
@@ -66,6 +71,8 @@ nav {
     padding: 5px 5px;
     align-items: center;
     width: 100%; /* Hace que ocupe todo el ancho */
+    max-width: 100vw;
+    overflow: hidden;
     height: 60px; /* Ajusta la altura */
     background-color: rgba(255, 255, 255, 0.9); /* Fondo con ligera transparencia */
     position: fixed;
@@ -119,7 +126,9 @@ img{
 }
 .column img {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
     border-radius: 5px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -133,7 +142,7 @@ img{
 
 .Products{
     padding: 200px;
-    border-radius: 5px 5px 5px 5px;
+
     background-color: white;
     border: 0px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -141,7 +150,7 @@ img{
 }
 .Portfolio{
     padding: 200px;
-    border-radius: 5px 5px 5px 5px;
+
     background-color: aliceblue;
     border: 1px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -149,16 +158,16 @@ img{
 }
 .Contacto{
     padding: 200px;
-    border-radius: 5px 5px 5px 5px;
+    
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
+    border: 0px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
     text-align: center;
 }
 footer{
-    border-radius: 5px 5px 5px 5px;
+ background-color: black;
     border: 1px solid white;
-    color: aliceblue;
+    color: rgb(247, 248, 249);
     text-align: center;
     padding: 20px;
 }
@@ -168,7 +177,7 @@ footer{
 
 /* Móviles (pantallas hasta 768px) */
 @media (max-width: 400px) {
-    * {
+    body {
       width: 100%; /* Asegura que el elemento ocupe el 100% del ancho */
     }
   }
@@ -185,12 +194,13 @@ footer{
     .about {
         flex-direction: column;
         align-items: center;
+        gap: 0;
     }
 
     .column {
         flex: 100%;
         width: 100%; /* Las columnas ocupan todo el ancho */
-        align-items: center; /* Centra las imágenes */
+     /* Centra las imágenes */
     }
 
     .column img {
