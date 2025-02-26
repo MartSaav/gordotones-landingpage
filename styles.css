@@ -165,20 +165,112 @@ img {
     box-shadow: 0px 10px 20px rgba(255, 242, 1, 0.3);
 }
 
-.Products, .Portfolio, .Contacto {
-    padding: 200px;
-    background-color: white;
+
+.Contacto {
+    padding: 100px;
+    background-color: #fffefc;
     text-align: center;
+}
+.Contacto h2{
+    font-size: 80px;
+}
+
+.imagen-contacto img{
+    width: 300px;
+    max-width: 100%;
+    display:inline;
+    justify-content: center;
+    align-items: center;
+  
+    
+    
+    
+}
+.Portfolio{
+    background: linear-gradient(to right, #f5c403, #f9f9f7); /* De izquierda a derecha */
+    padding: 100px;
+
+    
+    text-align:center;
+    animation: gradientMove 5s infinite alternate ease-in-out;
+}
+   
+/* Animación del gradiente */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}    
+
+.Portfolio h2{
+    font-size: 80px;
 }
 
 footer {
     
     background-color: black;
-    border: 1px solid white;
+    border: 0px solid white;
     color: rgb(247, 248, 249);
     text-align: center;
-    padding: 200px;
+    padding: 100px;
 }
+
+.social-buttons {
+    display: flex;
+    gap: 15px; /* Espaciado entre botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px; /* Bordes cuadrados */
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn img {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px;
+}
+
+/* 🔹 Instagram */
+.instagram {
+    background: #ffffff;
+}
+
+.instagram:hover {
+    background: #C13584;
+    transform: scale(1.1);
+}
+
+/* 🔹 Gmail */
+.gmail {
+    background: #f8f8f8;
+}
+
+.gmail:hover {
+    background: #B23121;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ---------- RESPONSIVE DESIGN ---------- */
 
